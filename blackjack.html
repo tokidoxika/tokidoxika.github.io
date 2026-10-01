@@ -170,8 +170,7 @@ const helpH=()=>`<div class="help"><h1>How to play</h1><ul>
 <li>Double: double your bet and take exactly one card.</li>
 <li>Split a pair into up to 4 hands. Split aces get one card each.</li>
 <li>Insurance costs half your bet when the dealer shows an ace and pays 2 to 1.</li>
-<li>Minimum bet is $5. Six decks, reshuffled when the shoe runs low.</li>
-<li>Swipe to move, tap to select, go back to pause.</li></ul>${btn('menu','Back','',1)}</div>`;
+<li>Minimum bet is $5. Six decks, reshuffled when the shoe runs low.</li></ul>${btn('menu','Back','',1)}</div>`;
 function render(){const k=lastK;app.innerHTML=screen==='menu'?menuH():screen==='help'?helpH():gameH();if(!paused)foc(app,k)}
 function renderOv(){ov.hidden=!paused;if(!paused)return;ov.innerHTML=`<div class="ttl">Paused</div>`+btn('resume','Continue','g',1)+btn('new',confirmNew?'Restart with $100?':'New game',confirmNew?'r':'')+btn('snd','Sound: '+(mute?'Off':'On'),mute?'r':'c')+btn('menu','Main menu');foc(ov,lastK)}
 
